@@ -25,8 +25,12 @@ public class Player : MonoBehaviour
         speed = 0.0f;
     }
 
-    void OnFly(InputValue value)
+    public void OnFly(InputAction.CallbackContext context)
     {
+        if (!context.performed)
+        {
+            return;
+        }
         speed = -flySpeed;
     }
 
@@ -35,7 +39,8 @@ public class Player : MonoBehaviour
     {
         speed += acceleration * Time.deltaTime;
         speed = Mathf.Min(speed, maxSpeed);
-        if (speed < 0.0) {
+        if (speed < 0.0) 
+        {
             speed += pull * Time.deltaTime;
         }
 
