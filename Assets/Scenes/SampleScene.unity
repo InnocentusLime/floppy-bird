@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 151288122}
   - component: {fileID: 151288125}
   - component: {fileID: 151288126}
+  - component: {fileID: 151288127}
   m_Layer: 6
   m_Name: Birb
   m_TagString: Untagged
@@ -305,6 +306,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a229e961ce36a143976f11a6e3383e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  speed: 3
+--- !u!50 &151288127
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151288121}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +567,7 @@ GameObject:
   - component: {fileID: 1130022868}
   - component: {fileID: 1130022867}
   - component: {fileID: 1130022869}
+  - component: {fileID: 1130022870}
   m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
@@ -2340,6 +2370,33 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!50 &1130022870
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130022865}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1464174647
 GameObject:
   m_ObjectHideFlags: 0
