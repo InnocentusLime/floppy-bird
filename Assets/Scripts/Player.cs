@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private float flySpeed;
     [SerializeField] private float pull;
+    [SerializeField] private bool isInvulnerable;
 
     private float speed;
     private Collider2D mCollider;
@@ -52,7 +53,7 @@ public class Player : MonoBehaviour
             distance = Mathf.Min(distance, hit.distance - shellSize);
         }
         mTransform.localPosition += (Vector3)(distance * Vector2.down);
-        if (hitCount != 0)
+        if (hitCount != 0 && !isInvulnerable)
         {
             speed = 0.0f;
             Destroy(gameObject);

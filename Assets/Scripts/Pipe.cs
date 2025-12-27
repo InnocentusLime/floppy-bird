@@ -7,6 +7,7 @@ public class Pipe : MonoBehaviour
     [SerializeField] private Transform bottom;
     [SerializeField] private float gap;
     [SerializeField] private float lifetime;
+    [SerializeField] private float scrollSpeed;
 
     private float pipeSegmentSize;
 
@@ -21,7 +22,7 @@ public class Pipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition -= (Vector3)(1.5f * Time.deltaTime * Vector2.right);
+        transform.localPosition -= (Vector3)(scrollSpeed * Time.deltaTime * Vector2.right);
         top.transform.localPosition = (Vector3)((pipeSegmentSize + gap) / 2.0f * Vector2.up);
         bottom.transform.localPosition = (Vector3)((pipeSegmentSize + gap) / 2.0f * Vector2.down);
     }
