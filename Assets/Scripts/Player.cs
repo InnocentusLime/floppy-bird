@@ -11,18 +11,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float flySpeed;
     [SerializeField] private float pull;
     [SerializeField] private bool isInvulnerable;
+    [SerializeField] private GameManager gameManager;
 
     private float speed;
     private Collider2D mCollider;
     private Transform mTransform;
     private RaycastHit2D[] hits; 
-    private int score;
-
-    public void OnScore()
-    {
-        Debug.Log("Reward!");
-        score++;
-    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -69,6 +63,6 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log(string.Format("You died! Score: {0}", score));
+        gameManager.OnGameOver();
     }
 }

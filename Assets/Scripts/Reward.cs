@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Reward : MonoBehaviour
 {
-    public Player score;
+    public GameManager score;
+
     private void Start()
     {
-        score = GameObject.FindAnyObjectByType<Player>();
+        score = GameObject.FindAnyObjectByType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
