@@ -17,10 +17,18 @@ public class PipeGen : MonoBehaviour
     void Update()
     {
         if (spawnTime <= 0.0f) {
-            Instantiate(pipePrefab);
+            Vector2 spawnPos = transform.localPosition;
+            spawnPos.y += RandomOffset(3);
+            Instantiate(pipePrefab, (Vector3)(spawnPos), Quaternion.identity);
             spawnTime = spawnFrequency;
             return;
         }
         spawnTime -= Time.deltaTime;
+    }
+
+    float RandomOffset(int level)
+    {
+        int choice = Random.Range(-level, level);
+        return (float)choice / (float)level * 1.5f;
     }
 }
